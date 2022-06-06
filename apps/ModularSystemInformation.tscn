@@ -3,7 +3,6 @@
 [ext_resource path="res://src/ModularInfo.gd" type="Script" id=1]
 
 [node name="WindowDialog" type="WindowDialog"]
-visible = true
 margin_left = 108.0
 margin_top = 84.0
 margin_right = 535.0
