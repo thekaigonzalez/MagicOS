@@ -2,6 +2,7 @@ extends Control
 
 func _ready():
 	print("Loading Time Daemon..")
+	$bar/SMenu.visible = false
 	
 func _process(f):
 	var timeDict = OS.get_time();
@@ -20,3 +21,10 @@ func _process(f):
 	
 	hours = str(hour)
 	$background/TimeCtl.text = hours + ":" + mins
+
+
+func _on_StartMenu_pressed():
+	if $bar/SMenu.visible:
+		$bar/SMenu.visible = false
+	else:
+		$bar/SMenu.visible = true
