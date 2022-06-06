@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/JetBrainsMono.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/JetBrainsMonoItalic.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/FiraCode-VariableFont_wght.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="Theme" id=2]
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 1 )
+Label/styles/normal = null
+
+[node name="WindowDialog" type="WindowDialog"]
+margin_left = 460.0
+margin_top = 198.0
+margin_right = 772.0
+margin_bottom = 515.0
+window_title = "About"
+
+[node name="Lab" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -36.5
+margin_top = 30.0
+margin_right = 36.5
+margin_bottom = 70.0
+theme = SubResource( 2 )
+custom_fonts/italics_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[i]MagicOS[/i]"
+text = "MagicOS"

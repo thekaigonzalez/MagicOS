@@ -1,0 +1,129 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://system/userland/applet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://apps/BridgeExplorer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/system_handler.gd" type="Script" id=3]
+[ext_resource path="res://apps/AboutMagic.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/HatMagic.png" type="Texture" id=5]
+[ext_resource path="res://system/g11/G11WT.tres" type="Theme" id=6]
+[ext_resource path="res://fonts/JetBrainsMono.tres" type="DynamicFont" id=7]
+[ext_resource path="res://assets/JetBrainsMono-Italic.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://system/g11/G11Bar.tres" type="StyleBox" id=9]
+[ext_resource path="res://assets/FiraCode-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://apps/Timectl.tscn" type="PackedScene" id=11]
+[ext_resource path="res://apps/Setup.tscn" type="PackedScene" id=12]
+[ext_resource path="res://apps/MagicOSVideo.tscn" type="PackedScene" id=13]
+
+[sub_resource type="StyleBoxFlat" id=5]
+
+[sub_resource type="DynamicFont" id=7]
+size = 72
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 8 )
+
+[sub_resource type="Theme" id=4]
+default_font = ExtResource( 7 )
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 2 )
+Button/styles/disabled = ExtResource( 9 )
+Button/styles/focus = ExtResource( 9 )
+Button/styles/hover = ExtResource( 9 )
+Button/styles/normal = ExtResource( 9 )
+Button/styles/pressed = ExtResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.486275, 0.388235, 0.388235, 1 )
+
+[node name="main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+script = ExtResource( 3 )
+
+[node name="background" type="Panel" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="HatMagic" type="Sprite" parent="background"]
+position = Vector2( 660, 327 )
+texture = ExtResource( 5 )
+
+[node name="TimeCtl" type="Label" parent="background"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.0
+margin_top = 127.0
+margin_right = 152.0
+margin_bottom = 223.0
+custom_fonts/font = SubResource( 7 )
+text = "Time"
+align = 1
+
+[node name="bar" type="Panel" parent="."]
+margin_top = 650.0
+margin_right = 1280.0
+margin_bottom = 720.0
+theme = SubResource( 4 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="Bottom" type="HBoxContainer" parent="bar"]
+anchor_top = 0.22973
+anchor_right = 1.0
+anchor_bottom = 0.72973
+size_flags_stretch_ratio = 1.08
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="files" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 266.0
+margin_right = 329.0
+margin_bottom = 35.0
+text = "Bridge"
+Link = ExtResource( 2 )
+
+[node name="nfy" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 333.0
+margin_right = 366.0
+margin_bottom = 35.0
+text = "NFy"
+Link = ExtResource( 2 )
+
+[node name="about" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 370.0
+margin_right = 503.0
+margin_bottom = 35.0
+text = "About MagicOS"
+Link = ExtResource( 4 )
+
+[node name="man" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 507.0
+margin_right = 710.0
+margin_bottom = 35.0
+text = "MagicOS Instructions"
+Link = ExtResource( 13 )
+
+[node name="time" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 714.0
+margin_right = 857.0
+margin_bottom = 35.0
+text = "Configure Time"
+Link = ExtResource( 11 )
+
+[node name="conf" parent="bar/Bottom" instance=ExtResource( 1 )]
+margin_left = 861.0
+margin_right = 1014.0
+margin_bottom = 35.0
+text = "Install MagicOS"
+Link = ExtResource( 12 )

@@ -1,0 +1,14 @@
+[gd_scene format=2]
+
+[node name="WindowDialog" type="WindowDialog"]
+margin_left = 34.0
+margin_top = 46.0
+margin_right = 380.0
+margin_bottom = 334.0
+
+[node name="MainLab" type="Label" parent="."]
+margin_left = 106.0
+margin_top = 9.0
+margin_right = 230.0
+margin_bottom = 23.0
+text = "Bridge File Explorer"
