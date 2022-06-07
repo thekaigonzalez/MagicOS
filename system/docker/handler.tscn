@@ -9,7 +9,7 @@
 [ext_resource path="res://apps/ModularSystemInformation.tscn" type="PackedScene" id=7]
 [ext_resource path="res://apps/Test.tscn" type="PackedScene" id=8]
 [ext_resource path="res://apps/AppUtil.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/FiraCode-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://assets/JetBrainsMonoNL-Bold.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://apps/Timectl.tscn" type="PackedScene" id=11]
 [ext_resource path="res://apps/NFY/MainWindow.tscn" type="PackedScene" id=12]
 [ext_resource path="res://apps/MagicOSVideo.tscn" type="PackedScene" id=13]
@@ -17,10 +17,6 @@
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.882353, 0.811765, 0.694118, 1 )
-
-[sub_resource type="DynamicFont" id=7]
-size = 72
-font_data = ExtResource( 10 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.486275, 0.388235, 0.388235, 1 )
@@ -31,6 +27,11 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="DynamicFont" id=10]
+size = 49
+use_filter = true
+font_data = ExtResource( 10 )
 
 [node name="main" type="Control"]
 anchor_right = 1.0
@@ -46,19 +47,6 @@ custom_styles/panel = SubResource( 5 )
 [node name="HatMagic" type="Sprite" parent="background"]
 position = Vector2( 660, 327 )
 texture = ExtResource( 5 )
-
-[node name="TimeCtl" type="Label" parent="background"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -152.0
-margin_top = 127.0
-margin_right = 152.0
-margin_bottom = 223.0
-custom_fonts/font = SubResource( 7 )
-text = "Time"
-align = 1
 
 [node name="bar" type="Panel" parent="."]
 margin_top = 650.0
@@ -162,5 +150,18 @@ margin_right = 180.0
 margin_bottom = 276.0
 text = "System Information"
 Link = ExtResource( 7 )
+
+[node name="TimeCtl" type="Label" parent="bar"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 516.0
+margin_top = -33.0
+margin_right = 632.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 10 )
+text = "Time"
+align = 1
 
 [connection signal="pressed" from="bar/StartMenu" to="." method="_on_StartMenu_pressed"]

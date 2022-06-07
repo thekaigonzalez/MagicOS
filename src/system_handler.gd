@@ -11,6 +11,11 @@ func _ready():
 	
 	$bar/SMenu.visible = false
 	
+	if File.new().file_exists("user://.time"):
+		var c = File.new()
+		c.open("user://.time", File.READ)
+		Env.timectl = c.get_as_text()
+	
 func _process(f):
 	var timeDict = OS.get_time();
 	var hour = timeDict.hour;
@@ -27,7 +32,7 @@ func _process(f):
 		if (hour > 12): hour = hour - 12
 	
 	hours = str(hour)
-	$background/TimeCtl.text = hours + ":" + mins
+	$bar/TimeCtl.text = hours + ":" + mins
 
 
 func _on_StartMenu_pressed():

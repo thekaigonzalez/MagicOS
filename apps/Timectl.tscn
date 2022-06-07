@@ -35,3 +35,5 @@ margin_bottom = 103.0
 text = "Military"
 items = [ "Military", null, false, 0, null, "Regular", null, false, 1, null ]
 selected = 0
+
+[connection signal="item_selected" from="time" to="." method="_on_time_item_selected"]
