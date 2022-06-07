@@ -16,7 +16,7 @@ func _on_triggered():
 		print("Automatically setting window title: " + text)
 		linked_instance.window_title = text
 	# Load G11 Theme
-	linked_instance.theme = load("res://system/g11/G11WT.tres")
+	linked_instance.theme = load("res://system/g11/G11_WMT.tres")
 	
 	linked_instance.show()
 

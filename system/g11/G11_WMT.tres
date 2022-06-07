@@ -11,7 +11,7 @@ corner_radius_bottom_left = 5
 expand_margin_top = 25.0
 
 [sub_resource type="DynamicFont" id=3]
-size = 13
+size = 12
 use_filter = true
 font_data = ExtResource( 1 )
 
