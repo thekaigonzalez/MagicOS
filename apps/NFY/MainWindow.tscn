@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="win" type="WindowDialog"]
+margin_left = 259.0
+margin_top = 92.0
+margin_right = 1074.0
+margin_bottom = 592.0
+window_title = "NFy"

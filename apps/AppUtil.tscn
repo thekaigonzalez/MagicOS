@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="WindowDialog" type="WindowDialog"]
+margin_left = 403.0
+margin_top = 121.0
+margin_right = 919.0
+margin_bottom = 551.0

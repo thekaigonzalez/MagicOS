@@ -22,7 +22,8 @@ You can watch the instruction video by opening the application. It tells you eve
 
 ### External Applications
 
-You can use apps from files in MagicOS Black Release 2, which will implement home filesystem apps.
+You can use apps from files since MagicOS Black Release 2, which implements home apps by using the local filesystem.
 
 ### Window Titles
 
+If you don't supply a window name, then the application will try to guess it, by using the Application's code-name (Button name)

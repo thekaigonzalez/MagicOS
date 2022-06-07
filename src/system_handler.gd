@@ -1,7 +1,14 @@
 extends Control
 
+onready var app_container = $bar/SMenu/ScrollContainer/AppContainer
+
 func _ready():
-	print("Loading Time Daemon..")
+	print("Loading System Daemon..")
+	for i in SnapPak.getAppFiles():
+		print("Installing Local App " + i)
+		
+		SnapPak.load_app(app_container, "user://apps/" + i)
+	
 	$bar/SMenu.visible = false
 	
 func _process(f):

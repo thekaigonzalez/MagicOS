@@ -12,12 +12,15 @@ config_version=4
 
 config/name="OS"
 run/main_scene="res://system/docker/handler.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="magicOS"
 config/icon="res://icon.png"
 
 [autoload]
 
 Env="*res://system/sysenv.gd"
 Drives="*res://system/dev/drives.gd"
+SnapPak="*res://src/sysAppLoader/snappakd.gd"
 
 [debug]
 
@@ -27,8 +30,13 @@ settings/fps/force_fps=144
 
 window/size/width=1280
 window/size/height=720
-window/stretch/mode="2d"
+window/stretch/mode="viewport"
 window/stretch/aspect="keep"
+
+[logging]
+
+file_logging/enable_file_logging.pc=false
+file_logging/log_path=""
 
 [physics]
 
