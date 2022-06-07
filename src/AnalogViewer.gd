@@ -17,5 +17,8 @@ func _on_ItemList_item_selected(index):
 		$VideoPlayer.stream = load("res://manual/MAGIC_OS_MANUAL.webm")
 	elif index == 1:
 		$VideoPlayer.stream = load("res://manual/MAGIC_OS_CONTRIB.webm")
-	
+	elif index == 2:
+		$VideoPlayer.stream = load("res://manual/MAGICOS_HOME.webm")
+	elif index == 3:
+		$VideoPlayer.stream = load("res://manual/MAGIC_LINUX_HOME.webm")
 	$VideoPlayer.play()
