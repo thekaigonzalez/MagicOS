@@ -19,3 +19,10 @@ There is a builtin application manager for MagicOS. This loads Windows (and soon
 ### Instruction video
 
 You can watch the instruction video by opening the application. It tells you everything you need to know, and more.
+
+### External Applications
+
+You can use apps from files in MagicOS Black Release 2, which will implement home filesystem apps.
+
+### Window Titles
+
