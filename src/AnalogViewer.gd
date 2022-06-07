@@ -13,6 +13,8 @@ func _ready():
 
 
 func _on_ItemList_item_selected(index):
+	if $Replay.visible:
+		$Replay.visible = false
 	if index == 0:
 		$VideoPlayer.stream = load("res://manual/MAGIC_OS_MANUAL.webm")
 	elif index == 1:
