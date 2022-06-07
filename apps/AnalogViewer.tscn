@@ -3,7 +3,6 @@
 [ext_resource path="res://src/AnalogViewer.gd" type="Script" id=1]
 
 [node name="WindowDialog" type="WindowDialog"]
-visible = true
 margin_left = 206.0
 margin_top = 117.0
 margin_right = 1127.0
