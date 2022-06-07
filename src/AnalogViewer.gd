@@ -22,3 +22,13 @@ func _on_ItemList_item_selected(index):
 	elif index == 3:
 		$VideoPlayer.stream = load("res://manual/MAGIC_LINUX_HOME.webm")
 	$VideoPlayer.play()
+	#$Replay.visible = false
+
+
+func _on_Replay_pressed():
+	$VideoPlayer.play()
+	$Replay.visible = false
+
+
+func _on_VideoPlayer_finished():
+	$Replay.visible = true

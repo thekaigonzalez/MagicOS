@@ -22,4 +22,14 @@ margin_top = 4.0
 margin_right = 916.0
 margin_bottom = 413.0
 
+[node name="Replay" type="Button" parent="."]
+visible = false
+margin_left = 569.0
+margin_top = 377.0
+margin_right = 623.0
+margin_bottom = 397.0
+text = "Replay"
+
 [connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="Replay" to="." method="_on_Replay_pressed"]
