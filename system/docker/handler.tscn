@@ -156,12 +156,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 516.0
+margin_left = 490.0
 margin_top = -33.0
-margin_right = 632.0
+margin_right = 635.0
 margin_bottom = 32.0
 custom_fonts/font = SubResource( 10 )
-text = "Time"
+text = "00:00"
 align = 1
 
 [connection signal="pressed" from="bar/StartMenu" to="." method="_on_StartMenu_pressed"]
