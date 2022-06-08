@@ -1,5 +1,7 @@
 # MagicOS
 
+![preview 2](/assets/prev2.png)
+
 MagicOS is a Godot-based "Operating System"
 
 Review [Components](#components) for a list of different components.
