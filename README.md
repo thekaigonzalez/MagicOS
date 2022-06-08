@@ -48,6 +48,7 @@ If you don't supply a window name, then the application will try to guess it, by
 
 - 3D support (A W.I.P, support will be finished in the near future.)
 - Dynamic tapes (Currently, you can only use what is supplied to you.)
+- About MagicOS application
 - Network interface (Not much you can do from an application standpoint!)
 
 ❌
