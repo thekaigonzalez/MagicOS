@@ -27,3 +27,37 @@ You can use apps from files since MagicOS Black Release 2, which implements home
 ### Window Titles
 
 If you don't supply a window name, then the application will try to guess it, by using the Application's code-name (Button name)
+
+## Features
+
+👍
+
+- Basic OS UI (Including `WindowDialog`s, user interactions, etc...)
+- Modular Filesystem (Everything is separated and neat)
+- Godot Engine (yes)
+- Working system (Interactive)
+- Time (System time, etc ...)
+- GSYSHAT for system variables
+- Hatpad for text editing
+- 3D sample apps
+- Customizable time
+- Applications (Using SnapPak)
+- Vintage tapes for learning (Click on the Analog Viewer)
+
+⚠️
+
+- 3D support (A W.I.P, support will be finished in the near future.)
+- Dynamic tapes (Currently, you can only use what is supplied to you.)
+
+❌
+
+- WWW (World Wide Web) support. (In construction)
+- Console (for system calls)
+- NFy (For listening to music within MagicOS)
+- Terminal Emulator (Also falls under "Console")
+- Users (Easy to implement, not a priority.)
+- Interactive OS setup / Tutorial (Easy to implement, not a priority.)
+
+🐛
+
+- App Duplication (multiple local apps)
