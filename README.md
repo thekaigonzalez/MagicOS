@@ -1,8 +1,12 @@
 # MagicOS
 
+MagicOS is a Godot-based "Operating System"
+
+## The purpose of "MagicOS" is to research different methods of user interaction.
+
 ![preview 2](/assets/prev2.png)
 
-MagicOS is a Godot-based "Operating System"
+![preview 3](/assets/prev3.png)
 
 Review [Components](#components) for a list of different components.
 
