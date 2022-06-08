@@ -56,6 +56,7 @@ If you don't supply a window name, then the application will try to guess it, by
 - NFy (For listening to music within MagicOS)
 - Terminal Emulator (Also falls under "Console")
 - Users (Easy to implement, not a priority.)
+- Internationalization
 - Interactive OS setup / Tutorial (Easy to implement, not a priority.)
 
 🐛
