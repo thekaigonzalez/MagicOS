@@ -21,6 +21,7 @@ config/icon="res://icon.png"
 Env="*res://system/sysenv.gd"
 Drives="*res://system/dev/drives.gd"
 SnapPak="*res://src/sysAppLoader/snappakd.gd"
+gsyshat="*res://src/gsyshat.gd"
 
 [debug]
 

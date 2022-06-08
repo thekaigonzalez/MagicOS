@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( -1, 1, 1, 1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, 1, 1, -1, -1, 1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, 1, 1, -1, 1, 1, 1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, -1, -1, 1, 1, -1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1 )
+
+[node name="WindowDialog" type="WindowDialog"]
+margin_left = 345.0
+margin_top = 145.0
+margin_right = 964.0
+margin_bottom = 475.0
+window_title = "My Game"
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 619.0
+margin_bottom = 330.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1280, 720 )
+size_override_stretch = true
+handle_input_locally = false
+render_target_update_mode = 0
+
+[node name="MeshInstance" type="MeshInstance" parent="ViewportContainer/Viewport"]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="ViewportContainer/Viewport/MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="ViewportContainer/Viewport/MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 0.948257, 0.317503, 0, -0.317503, 0.948257, 0, 2.86033, 8.66712 )

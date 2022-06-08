@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://apps/WorldScript1.gd" type="Script" id=1]
+[ext_resource path="res://default_env.tres" type="Environment" id=2]
+
+[sub_resource type="World" id=4]
+environment = ExtResource( 2 )
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 9.424, -6.336, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Spinn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5, 2.3, 2.8, 3 ),
+"transitions": PoolRealArray( -2, -2, -2, -2, -2, 1 ),
+"update": 0,
+"values": [ Vector3( 9.424, -6.336, 0 ), Vector3( 20.619, 9.783, 0 ), Vector3( -15.5311, -33.733, 21.108 ), Vector3( 4.77376, 37.9722, 15.2923 ), Vector3( 8.09536, -21.6155, 4.36924 ), Vector3( 9.424, -6.336, 0 ) ]
+}
+
+[node name="App3D" type="WindowDialog"]
+margin_left = 203.0
+margin_top = 112.0
+margin_right = 1092.0
+margin_bottom = 626.0
+window_title = "Spinning Cube"
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+margin_right = 889.0
+margin_bottom = 514.0
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="ViewportContainer"]
+size = Vector2( 1280, 720 )
+own_world = true
+world = SubResource( 4 )
+handle_input_locally = false
+render_target_update_mode = 0
+script = ExtResource( 1 )
+
+[node name="Camera" type="Camera" parent="ViewportContainer/Viewport"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.73323 )
+
+[node name="MeshInstance" type="MeshInstance" parent="ViewportContainer/Viewport"]
+transform = Transform( 0.993892, -0.0180701, -0.108869, 0, 0.986504, -0.163739, 0.110359, 0.162739, 0.980478, 0, -0.611884, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ViewportContainer/Viewport/MeshInstance"]
+anims/RESET = SubResource( 2 )
+anims/Spinn = SubResource( 3 )

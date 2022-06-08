@@ -3,7 +3,6 @@
 [ext_resource path="res://apps/NFY/nfy_main.gd" type="Script" id=1]
 
 [node name="win" type="WindowDialog"]
-visible = true
 margin_left = 259.0
 margin_top = 92.0
 margin_right = 1074.0

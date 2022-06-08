@@ -42,3 +42,11 @@ func _on_Load_pressed():
 	$load.show()
 	$load.current_dir = "user://"
 	
+
+
+func _on_settings_pressed():
+	$SettingsWindow.show()
+
+
+func _on_CheckBox_pressed():
+	$Code.syntax_highlighting = $SettingsWindow/synHi.pressed

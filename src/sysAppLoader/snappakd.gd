@@ -33,19 +33,32 @@ func getAppFiles():
 	return list_of_app_files
 	
 func load_app(Apps: VBoxContainer, pack_path):
+	#
+		
 	print("Loading " + pack_path)
 	
 	var loaded = ProjectSettings.load_resource_pack(pack_path)
 	
-	var initFile = load("res://Init.gd").new()
+	#var initFile = load("res://Init.gd").new()
 	
-	var appName = initFile.AppName
+	#var appName = initFile.AppName
+	
 	
 	var app = load("res://system/userland/applet.tscn").instance()
 	
-	app.text = appName
 	
-	app.Link = load("res://Window.tscn")
+	
+	#print("Load app name: " + appName)
+	
+	var win = load("res://Window.tscn")
+	
+	app.Link = win
+	
+	app.text = win.instance().window_title
 	
 	Apps.add_child(app)
 	
+	var a = Directory.new()
+	
+	a.remove("res://Init.gd")
+	a.remove("res://Window.tscn")
