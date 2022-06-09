@@ -48,6 +48,7 @@ If you don't supply a window name, then the application will try to guess it, by
 - 3D sample apps
 - Customizable time
 - Applications (Using SnapPak)
+- Home directory
 - Vintage tapes for learning (Click on the Analog Viewer)
 
 ⚠️
@@ -56,6 +57,7 @@ If you don't supply a window name, then the application will try to guess it, by
 - Dynamic tapes (Currently, you can only use what is supplied to you.)
 - About MagicOS application
 - Network interface (Not much you can do from an application standpoint!)
+- Users
 
 ❌
 
@@ -63,7 +65,6 @@ If you don't supply a window name, then the application will try to guess it, by
 - Console (for system calls)
 - NFy (For listening to music within MagicOS)
 - Terminal Emulator (Also falls under "Console")
-- Users (Easy to implement, not a priority.)
 - Internationalization
 - Interactive OS setup / Tutorial (Easy to implement, not a priority.)
 
