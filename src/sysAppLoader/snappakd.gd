@@ -5,6 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 
+export var APPS_PATH = "user://apps/"
 
 func listDir(d):
 	var dir = Directory.new()
@@ -37,12 +38,7 @@ func load_app(Apps: VBoxContainer, pack_path):
 		
 	print("Loading " + pack_path)
 	
-	var loaded = ProjectSettings.load_resource_pack(pack_path)
-	
-	#var initFile = load("res://Init.gd").new()
-	
-	#var appName = initFile.AppName
-	
+	var loaded = ProjectSettings.load_resource_pack(APPS_PATH + pack_path, false)
 	
 	var app = load("res://system/userland/applet.tscn").instance()
 	
@@ -50,7 +46,7 @@ func load_app(Apps: VBoxContainer, pack_path):
 	
 	#print("Load app name: " + appName)
 	
-	var win = load("res://Window.tscn")
+	var win = load("res://" + pack_path.get_basename() + ".tscn")
 	
 	app.Link = win
 	

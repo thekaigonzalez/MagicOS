@@ -7,7 +7,7 @@ func _ready():
 	for i in SnapPak.getAppFiles():
 		print("Installing Local App " + i)
 		
-		SnapPak.load_app(app_container, "user://apps/" + i)
+		SnapPak.load_app(app_container, i)
 	
 	$bar/SMenu.visible = false
 	
@@ -32,6 +32,7 @@ func _process(f):
 		if (hour > 12): hour = hour - 12
 	
 	hours = str(hour)
+	$bar/user.text = gsyshat.username
 	$bar/TimeCtl.text = hours + ":" + mins
 
 
