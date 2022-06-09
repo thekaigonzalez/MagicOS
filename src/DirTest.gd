@@ -13,3 +13,4 @@ func _ready():
 	print("Home: " + OS.get_user_data_dir())
 	
 	Directory.new().make_dir("user://.test1")
+	print("home (user): " + gsyshat.HOME_DIR())

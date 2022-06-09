@@ -4,6 +4,11 @@ onready var app_container = $bar/SMenu/ScrollContainer/AppContainer
 
 func _ready():
 	print("Loading System Daemon..")
+	
+	print("system: creating sys dirs")
+	
+	if not (Directory.new().dir_exists("user://home")):
+		Directory.new().make_dir("user://home")
 	for i in SnapPak.getAppFiles():
 		print("Installing Local App " + i)
 		
